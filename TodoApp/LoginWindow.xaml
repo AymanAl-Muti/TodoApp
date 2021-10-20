@@ -1,0 +1,148 @@
+﻿<Window x:Class="TodoApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TodoApp"
+        mc:Ignorable="d"
+        Title="AnyDo - A Generic TODO App" Height="450" Width="800"
+        Icon="Images/AnyDo.png">
+    <Grid  Background="#181735"
+           x:Name="Grid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TextError To be created programmatically -->
+        <TextBlock x:Name="ErrorText"></TextBlock>
+
+        <!--Welcome Back Text-->
+        <TextBlock
+            Text="Welcome back to AnyDO"
+            Grid.Column="1"
+            Grid.Row="1"
+            FontSize="30"
+            FontWeight="Medium"
+            Foreground="White"
+            FontFamily="Fonts/#Dosis"
+            Margin="250,10,0,0"/>
+
+        <!--Email Text-->
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="Email"
+            Foreground="White"
+            FontSize="14px"
+            FontFamily="Fonts/#Dosis"
+            Margin="380,80,0,1"/>
+
+        <!--Email input-->
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="3"
+            x:Name="emailinput"
+            Margin="170,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!--Password Text-->
+        <TextBlock
+            Grid.Column="1"
+            Grid.Row="4"
+            Text="password"
+            Foreground="White"
+            FontSize="14px"
+            FontFamily="Fonts/#Dosis"
+            Margin="370,10,0,1"/>
+
+        <!--Password input-->
+        <PasswordBox
+            Grid.Column="1"
+            Grid.Row="5"
+            x:Name="paswordinput"
+            Margin="170,0,0,0"
+            Height="20"
+            Width="500">
+            <PasswordBox.Style>
+                <Style TargetType="{x:Type PasswordBox}">
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8" />
+                        </Style>
+                    </Style.Resources>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                <Border x:Name="border" CornerRadius="8" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF7EB4EA"/>
+                                    </Trigger>
+                                    <Trigger Property="IsKeyboardFocused" Value="true">
+                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF569DE5"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                                <Condition Property="IsSelectionActive" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                        </MultiTrigger>
+                    </Style.Triggers>
+                </Style>
+            </PasswordBox.Style>
+        </PasswordBox>
+
+        <!--Login Button-->
+        <Button x:Name="loginButton"
+                Grid.Column="1"
+                Grid.Row="6"
+                Margin="301,10,134,0"
+                Grid.ColumnSpan="1"
+                Background="White"
+                FontFamily="Fonts/#Dosis"
+                FontSize="14"
+                Click="loginButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Button.Resources> Login
+        </Button>
+
+       
+
+    </Grid>
+</Window>
