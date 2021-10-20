@@ -24,6 +24,17 @@ The current features are incredibly limited as of now since the project is still
  
  ## Some screenshots of what the program looks like:
  
- ![Screenshot of the registration screen.](https://imgur.com/a/1bao0nt)
- ![Screenshot of the confirmation code screen.](https://imgur.com/a/K1UlewY)
+ ![Screenshot of the registration screen.](/TodoApp/Images/ScreenShotOfReg.png)
  
+ 
+ ![Screenshot of the confirmation code screen.](/TodoApp/Images/conScreenShot.png)
+ 
+ #### Technologies
+ ![](https://img.shields.io/badge/OS-Arch-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Editor-VisualStudio-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)  ![](https://img.shields.io/badge/Code-CSharp-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Tools-MySQL-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a) ![](https://img.shields.io/badge/Library-ASP.NET-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)  
+ 
+
+
+
+ 
+
+
